@@ -3,7 +3,7 @@ with open('abc.log','r') as f:
         line=line.strip()
         try:
             new=line.split()
-            if 'error' in new[1]:
+            if ('error' in new[1] or 'info' in new[1]):
                 print(line)
         except Exception as e:
             print(e)
