@@ -23,9 +23,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install ansible
-        ansible-galaxy install hemanth22.pipproxy
-        ansible-playbook pipproxytest.yml
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       env:
