@@ -25,6 +25,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install ansible
         ansible-galaxy install hemanth22.pipproxy
+        ansible-playbook pipproxytest.yml
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
