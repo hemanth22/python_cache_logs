@@ -3,6 +3,7 @@
   remote_user: root
   become: true
   vars:
+    originaljfrogdetails: "{{ lookup('env', 'originaljfrogdetails') }}"
     mirror_pypi_url: originaljfrogdetails
   roles:
     - hemanth22.pipproxy
